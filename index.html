@@ -1,56 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actividad</title>
-</head>
-<body>
-    <div class="todo-container">
-        <form action="#">
-            <div class="one-container">
-                <div class="new-container">
-                    <h1>
-                        NUEVA TAREA
-                    </h1>
-                    <div class="new">
-                        <label for="new" class="placeLabel">Título de la tarea </textarea></label>
-                        <input type="text" name="new" required>
-                    </div>
-                   <div class="descrip">
-                      <label for="descrip" class="placeLabel">Descripciónde la tarea </textarea></label>
-                      <input type="text" name="descrip" required>
-                   </div>  
-                </div>
-                <button type="submit">GUARDAR</button>
-                <div class="list">
-                    <h2>LISTA DE TAREAS</h2>
-                    <div class="one">
-                        <button type="button">✓</button>
-                        <h3>Completar los ejercicios de arte</h3>
-                        <img src="img/1.png" alt="">
-                        <img src="img/2.png" alt="">
-                        <img src="img/3.png" alt="">
-                    </div>
-                    <div class="one">
-                        <button type="button">✓</button>
-                        <h3>Completar los ejercicios de arte</h3>
-                        <img src="img/1.png" alt="">
-                        <img src="img/2.png" alt="">
-                        <img src="img/3.png" alt="">
-                    </div>
-                    <div class="one">
-                        <button type="button">✓</button> 
-                        <h3>Completar los ejercicios de arte</h3>
-                        <img src="img/1.png" alt="">
-                        <img src="img/2.png" alt="">
-                        <img src="img/3.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </form>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tarea</title>
+    <link rel="stylesheet" href="css/home.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="new-task">
+        <h1>Nueva Tarea</h1>
+        <input id="title-task" type="text" placeholder="Título de la tarea" />
+        <textarea
+          id="description-task"
+          type="text"
+          placeholder="Descripción de la tarea"
+        ></textarea>
+        <button id="save-btn">Guardar</button>
+      </div>
+      <div class="list-tasks">
+        <div class="title-list">
+          <h1>Lista de Tareas</h1>
+        </div>
+        <div class="list" id="list-container"></div>
+      </div>
     </div>
-    
-</body>
+    <dialog id="task-detail-dialog">
+      <div class="dialog">
+        <div class="task-detail">
+          <div id="close-dialog" class="close-dialog">x</div>
+          <div id="task-detail"></div>
+        </div>
+      </div>
+    </dialog>
+    <script src="js/home.js"></script>
+  </body>
 </html>
